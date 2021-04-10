@@ -11,6 +11,25 @@ final class FilterViewModel: ObservableObject {
     @Published var selectedFilter: String?
     @Published var presentingFilter: Bool = false
     @Published var sortByCriteria: [String] = []
+    
+    @Published var selectedCriteria: String = ""
+    var categories = ["Sort By",
+                      "Product Category",
+                      "Brands",
+                      "Size Types",
+                      "Sizes",
+                      "Prices",
+                      "Release Years"]
+    var selectedCriteriaDict: [String: String] =
+    [
+        "Sort By": "",
+        "Product Category": "",
+        "Brands": "",
+        "Size Types": "",
+        "Sizes": "",
+        "Prices": "",
+        "Release Years": ""
+    ]
     var displayedSortbyCriteria: [String: String] = [
         "Featured": "The 'Featured' picks are chosen specifically for you by the StockX team.",
         "Most Popular": "The 'Most Popular' are the products with the most sales over the past 72 hours.",
@@ -25,4 +44,49 @@ final class FilterViewModel: ObservableObject {
         "Highest Bid": "The highest price someone is currently offering to pay for this product.",
         "Release Date": "The date this product launched."
     ]
+    
+    init() {
+        var sizesMap: [String: String] = [:]
+        for sizeMultiple in 2...(17*2) {
+            let size = sizeMultiple / 2
+            sizesMap[String(size)] = ""
+        }
+        var yearMap: [String: String] = ["<2001": ""]
+        for year in 2001...2021 {
+            yearMap[String(year)] = ""
+        }
+        var priceMaps: [String: String] = ["<2001": ""]
+        for price in 1...5 {
+            let startPrice = (price * 100)
+            let endPrice = (price * 100) + 100
+            let priceString = "\(startPrice) - \(endPrice)"
+            priceMaps[priceString] = ""
+        }
+        priceMaps["$600 + "] = ""
+        var selectedCriteriaOptions: [String: [String: String]] =
+        [
+            "Sort By": displayedSortbyCriteria,
+            "Product Category": [
+                "Sneakers": ""
+            ],
+            "Brands": [
+                "Yeezy": "",
+                "Air Jordan": "",
+                "Off-White": ""
+            ],
+
+            "Size Types":  [
+                "Men": "",
+                "Women": "",
+                "Child": "",
+                "Preschool": "",
+                "Infant": "",
+                "Toddler": "",
+            ],
+            "Sizes": priceMaps,
+            "Release Years": yearMap
+        ]
+    }
+   
+    
 }

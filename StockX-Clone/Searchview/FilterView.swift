@@ -35,20 +35,18 @@ struct FilterCriteriaView: View {
     }
 }
 struct FilterSettingView: View {
-    var nameOfCriteria: String
-    @Binding var selectedItemString: String?
-    @Binding var currentItemString: String
+    
+    @Binding var selectedItemString: String
+    
+    var description: String?
+    var currentItemString: String
     var body: some View {
-        VStack {
-            Spacer()
-            Button(action: {
-                if selectedItemString == currentItemString {
-                    selectedItemString = nil
-                } else {
-                    selectedItemString = currentItemString
-                }
+        
+            
+        
+            VStack(alignment: .leading) {
+                Spacer()
                 
-            }, label: {
                 HStack {
                     if currentItemString == selectedItemString {
                         Image(systemName: "checkmark")
@@ -57,45 +55,72 @@ struct FilterSettingView: View {
                             .frame(width: 15, height: 15)
                             .foregroundColor(iconSelectedColor)
                     }
-                    Text(nameOfCriteria)
+                    Text(currentItemString)
                         .font(.system(size: 15))
-                        .foregroundColor(.black)
+                        .foregroundColor(currentItemString == selectedItemString ? iconSelectedColor : .black)
                         .fontWeight(.bold)
+                    
                     Spacer()
                     
                 }.padding(.horizontal, 20)
+                .padding(.top, 10)
+                if let description = description {
+                    Text(description)
+                        .font(.system(size: 12))
+                        .foregroundColor(currentItemString == selectedItemString ? iconSelectedColor : .gray)
+                        .fontWeight(.regular)
+                        .padding(.horizontal, 20)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .padding(.vertical, 10)
+                }
+                
+
                 Spacer()
                 Rectangle()
                     .frame(maxWidth: .infinity)
                     .frame(height: 1)
-                    .foregroundColor(currentItemString == selectedItemString ? iconSelectedColor : Color.black)
-            })
+                    .foregroundColor(iconUnselectedColor)
+            }
+                
             
-        }
-        .frame(maxWidth: .infinity)
-        .frame(height: 50)
+            .frame(maxWidth: .infinity)
+            .frame(height: description == nil ? 50 : 150)
+            .onTapGesture {
+                print(selectedItemString)
+                if selectedItemString == currentItemString {
+                    selectedItemString = ""
+                } else {
+                    selectedItemString = currentItemString
+//                    print(selectedItemString)
+                }
+            }
+        
     }
 }
 
 struct FilterChangeView: View {
     @State var filterViewModel: FilterViewModel
+    @Binding var selectedCriteria: String
     var body: some View {
+        if filterViewModel.selectedFilter == "Sort By" {
+            ScrollView(.vertical, showsIndicators: true, content: {
+                LazyVStack {
+                    ForEach(filterViewModel.displayedSortbyCriteria.sorted(by: >), id: \.key) { key, desc in
+                        FilterSettingView(selectedItemString: $selectedCriteria, description: desc, currentItemString: key)
+                    }
+                }
+            })
+        }
         
     }
 }
 struct FilterSelectView: View {
     @State var filterViewModel: FilterViewModel
-    var categories = ["Sort By",
-                      "Product Category",
-                      "Brands",
-                      "Size Types",
-                      "Sizes",
-                      "Prices",
-                      "Release Years"]
+    
     var body: some View {
         ScrollView(.vertical, showsIndicators: true, content: {
             LazyVStack {
-                ForEach(categories, id: \.self) { (category) in
+                ForEach(filterViewModel.categories, id: \.self) { (category) in
                     Button(action: {
                         withAnimation {
                             filterViewModel.presentingFilter = true
@@ -173,7 +198,7 @@ struct FilterView: View {
                 .frame(height: 1)
                 .foregroundColor(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)))
             if filterViewModel.presentingFilter && filterViewModel.selectedFilter != nil {
-                FilterChangeView()
+                FilterChangeView(filterViewModel: filterViewModel, selectedCriteria: $filterViewModel.selectedCriteria)
             } else {
                 FilterSelectView(filterViewModel: filterViewModel)
             }
