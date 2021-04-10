@@ -20,8 +20,12 @@ struct SearchView: View {
                     
                     .font(.system(size: 15))
                     .padding(.horizontal, 10)
-                Image(systemName: "gearshape")
-                    .foregroundColor(Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)))
+                Button(action: {
+                    searchViewModel.displayOptions = true
+                }) {
+                    Image(systemName: "gearshape")
+                        .foregroundColor(Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)))
+                }
             }
             .padding(.top, 20)
             .padding(.horizontal, 20)
@@ -38,22 +42,25 @@ struct SearchView: View {
             ScrollView(showsIndicators: false) {
                 LazyVGrid(columns: columns, alignment: .leading) {
                     
-                    ItemListingView()
-                        .padding(.bottom, 20)
-                    ItemListingView()
-                        .padding(.bottom, 20)
-                    ItemListingView()
-                        .padding(.bottom, 20)
-                    ItemListingView()
-                        .padding(.bottom, 20)
-                    ItemListingView()
-                        .padding(.bottom, 20)
-                    ItemListingView()
-                        .padding(.bottom, 20)
+//                    ItemListingView()
+//                        .padding(.bottom, 20)
+//                    ItemListingView()
+//                        .padding(.bottom, 20)
+//                    ItemListingView()
+//                        .padding(.bottom, 20)
+//                    ItemListingView()
+//                        .padding(.bottom, 20)
+//                    ItemListingView()
+//                        .padding(.bottom, 20)
+//                    ItemListingView()
+//                        .padding(.bottom, 20)
                 }
             }
             .padding(.horizontal, 20)
 
+        }
+        .sheet(isPresented: $searchViewModel.displayOptions) {
+            FilterView(isPresentingView: $searchViewModel.displayOptions)
         }
     }
 }

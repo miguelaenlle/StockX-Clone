@@ -169,6 +169,7 @@ struct Homeview: View {
     }
 }
 }
+    
 
 struct Homeview_Previews: PreviewProvider {
     static var previews: some View {
