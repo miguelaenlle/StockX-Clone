@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46E091D4BCDA3D42993A617B /* Pods_StockX_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D69CACBB59638D1B9C1549E /* Pods_StockX_Clone.framework */; };
 		AF4B9CFA26213435001095C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4B9CF926213435001095C9 /* AppDelegate.swift */; };
 		AF4B9CFC26213435001095C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4B9CFB26213435001095C9 /* SceneDelegate.swift */; };
-		AF4B9CFE26213435001095C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4B9CFD26213435001095C9 /* ContentView.swift */; };
 		AF4B9D0026213437001095C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF4B9CFF26213437001095C9 /* Assets.xcassets */; };
 		AF4B9D0326213437001095C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF4B9D0226213437001095C9 /* Preview Assets.xcassets */; };
 		AF4B9D0626213437001095C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF4B9D0426213437001095C9 /* LaunchScreen.storyboard */; };
+		AF4B9D1726213587001095C9 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4B9D1626213587001095C9 /* EntryView.swift */; };
+		AF4B9D1B2621358D001095C9 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4B9D1A2621358D001095C9 /* TabBarView.swift */; };
+		AF4B9D1F26213777001095C9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4B9D1E26213777001095C9 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		248AFE285F8B7C03DB1EE66C /* Pods-StockX-Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockX-Clone.release.xcconfig"; path = "Target Support Files/Pods-StockX-Clone/Pods-StockX-Clone.release.xcconfig"; sourceTree = "<group>"; };
+		44B2E386316A8149A252196A /* Pods-StockX-Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockX-Clone.debug.xcconfig"; path = "Target Support Files/Pods-StockX-Clone/Pods-StockX-Clone.debug.xcconfig"; sourceTree = "<group>"; };
+		5D69CACBB59638D1B9C1549E /* Pods_StockX_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockX_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF4B9CF626213435001095C9 /* StockX-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StockX-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF4B9CF926213435001095C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF4B9CFB26213435001095C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AF4B9CFD26213435001095C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AF4B9CFF26213437001095C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF4B9D0226213437001095C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF4B9D0526213437001095C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF4B9D0726213437001095C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF4B9D1626213587001095C9 /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
+		AF4B9D1A2621358D001095C9 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		AF4B9D1E26213777001095C9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46E091D4BCDA3D42993A617B /* Pods_StockX_Clone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,8 @@
 			children = (
 				AF4B9CF826213435001095C9 /* StockX-Clone */,
 				AF4B9CF726213435001095C9 /* Products */,
+				CA30B6443193A6A85054C986 /* Pods */,
+				BED5E307763A310F1215E85D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,13 +67,19 @@
 		AF4B9CF826213435001095C9 /* StockX-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				AF4B9D1526213574001095C9 /* Navigation */,
+				AF4B9D12262134E3001095C9 /* Mainapp */,
+				AF4B9D11262134D7001095C9 /* Profileview */,
+				AF4B9D10262134CA001095C9 /* Searchview */,
+				AF4B9D0F262134C5001095C9 /* Detailview */,
+				AF4B9D0E26213475001095C9 /* Homepage */,
 				AF4B9CF926213435001095C9 /* AppDelegate.swift */,
 				AF4B9CFB26213435001095C9 /* SceneDelegate.swift */,
-				AF4B9CFD26213435001095C9 /* ContentView.swift */,
 				AF4B9CFF26213437001095C9 /* Assets.xcassets */,
 				AF4B9D0426213437001095C9 /* LaunchScreen.storyboard */,
 				AF4B9D0726213437001095C9 /* Info.plist */,
 				AF4B9D0126213437001095C9 /* Preview Content */,
+				AF4B9D1E26213777001095C9 /* Constants.swift */,
 			);
 			path = "StockX-Clone";
 			sourceTree = "<group>";
@@ -75,6 +92,68 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		AF4B9D0E26213475001095C9 /* Homepage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Homepage;
+			sourceTree = "<group>";
+		};
+		AF4B9D0F262134C5001095C9 /* Detailview */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detailview;
+			sourceTree = "<group>";
+		};
+		AF4B9D10262134CA001095C9 /* Searchview */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Searchview;
+			sourceTree = "<group>";
+		};
+		AF4B9D11262134D7001095C9 /* Profileview */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profileview;
+			sourceTree = "<group>";
+		};
+		AF4B9D12262134E3001095C9 /* Mainapp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mainapp;
+			sourceTree = "<group>";
+		};
+		AF4B9D1526213574001095C9 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				AF4B9D1626213587001095C9 /* EntryView.swift */,
+				AF4B9D1A2621358D001095C9 /* TabBarView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		BED5E307763A310F1215E85D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D69CACBB59638D1B9C1549E /* Pods_StockX_Clone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA30B6443193A6A85054C986 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				44B2E386316A8149A252196A /* Pods-StockX-Clone.debug.xcconfig */,
+				248AFE285F8B7C03DB1EE66C /* Pods-StockX-Clone.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +161,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF4B9D0A26213437001095C9 /* Build configuration list for PBXNativeTarget "StockX-Clone" */;
 			buildPhases = (
+				FE90D3180D90052B4D44611B /* [CP] Check Pods Manifest.lock */,
 				AF4B9CF226213435001095C9 /* Sources */,
 				AF4B9CF326213435001095C9 /* Frameworks */,
 				AF4B9CF426213435001095C9 /* Resources */,
+				970E083C5FC6309F9677AA08 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,14 +221,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		970E083C5FC6309F9677AA08 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StockX-Clone/Pods-StockX-Clone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StockX-Clone/Pods-StockX-Clone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StockX-Clone/Pods-StockX-Clone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE90D3180D90052B4D44611B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StockX-Clone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AF4B9CF226213435001095C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF4B9D1F26213777001095C9 /* Constants.swift in Sources */,
 				AF4B9CFA26213435001095C9 /* AppDelegate.swift in Sources */,
 				AF4B9CFC26213435001095C9 /* SceneDelegate.swift in Sources */,
-				AF4B9CFE26213435001095C9 /* ContentView.swift in Sources */,
+				AF4B9D1B2621358D001095C9 /* TabBarView.swift in Sources */,
+				AF4B9D1726213587001095C9 /* EntryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +408,7 @@
 		};
 		AF4B9D0B26213437001095C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44B2E386316A8149A252196A /* Pods-StockX-Clone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -304,6 +430,7 @@
 		};
 		AF4B9D0C26213437001095C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 248AFE285F8B7C03DB1EE66C /* Pods-StockX-Clone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
