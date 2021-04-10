@@ -6,30 +6,71 @@
 //
 
 import Foundation
+struct CategoryDescription : Identifiable {
+    var id = UUID()
+    var criteria: String
+    var description: String
+}
+struct SelectedCategory : Identifiable {
+    var id = UUID()
+    var categoryName: String
+    var displayedCriteria: [CategoryDescription]
+}
+
 
 final class FilterViewModel: ObservableObject {
-    @Published var selectedFilter: String?
+    @Published var selectedFilter: String = ""
     @Published var presentingFilter: Bool = false
     @Published var sortByCriteria: [String] = []
     
     @Published var selectedCriteria: String = ""
+    @Published var selectedCriteriaCategory: String = ""
+    @Published var selectedCriteriaOptions: [String: [String: String]] = [:]
+    @Published var numCriteriaSelected: Int = 0
     var categories = ["Sort By",
-                      "Product Category",
                       "Brands",
                       "Size Types",
                       "Sizes",
                       "Prices",
                       "Release Years"]
-    var selectedCriteriaDict: [String: String] =
+    @Published var selectedCriteriaDict: [String: String] =
     [
         "Sort By": "",
-        "Product Category": "",
         "Brands": "",
         "Size Types": "",
         "Sizes": "",
         "Prices": "",
         "Release Years": ""
     ]
+    func clearCriteria() {
+        selectedCriteriaDict = [
+            "Sort By": "",
+            "Brands": "",
+            "Size Types": "",
+            "Sizes": "",
+            "Prices": "",
+            "Release Years": ""
+        ]
+        numCriteriaSelected = 0
+    }
+    func setCriteriaDict() {
+        print(selectedCriteriaCategory)
+        print(numCriteriaSelected)
+        print(selectedCriteria)
+        if selectedCriteria != "" && selectedCriteriaDict[selectedCriteriaCategory] == "" {
+            // it was changed from nothing
+            numCriteriaSelected += 1
+            selectedCriteriaDict[selectedCriteriaCategory] = selectedCriteria
+        } else if selectedCriteria == "" && selectedCriteriaDict[selectedCriteriaCategory] != "" {
+            // went from something to nothing
+            numCriteriaSelected -= 1
+            selectedCriteriaDict[selectedCriteriaCategory] = selectedCriteria
+        }
+        selectedCriteria = ""
+        print(selectedCriteriaCategory)
+        print(numCriteriaSelected)
+        print(selectedCriteria)
+    }
     var displayedSortbyCriteria: [String: String] = [
         "Featured": "The 'Featured' picks are chosen specifically for you by the StockX team.",
         "Most Popular": "The 'Most Popular' are the products with the most sales over the past 72 hours.",
@@ -48,14 +89,16 @@ final class FilterViewModel: ObservableObject {
     init() {
         var sizesMap: [String: String] = [:]
         for sizeMultiple in 2...(17*2) {
-            let size = sizeMultiple / 2
+            let size = Float(sizeMultiple) / 2
+            print(size)
+            
             sizesMap[String(size)] = ""
         }
         var yearMap: [String: String] = ["<2001": ""]
         for year in 2001...2021 {
             yearMap[String(year)] = ""
         }
-        var priceMaps: [String: String] = ["<2001": ""]
+        var priceMaps: [String: String] = ["Under $100": ""]
         for price in 1...5 {
             let startPrice = (price * 100)
             let endPrice = (price * 100) + 100
@@ -63,12 +106,10 @@ final class FilterViewModel: ObservableObject {
             priceMaps[priceString] = ""
         }
         priceMaps["$600 + "] = ""
-        var selectedCriteriaOptions: [String: [String: String]] =
+        
+        selectedCriteriaOptions =
         [
             "Sort By": displayedSortbyCriteria,
-            "Product Category": [
-                "Sneakers": ""
-            ],
             "Brands": [
                 "Yeezy": "",
                 "Air Jordan": "",
@@ -83,7 +124,8 @@ final class FilterViewModel: ObservableObject {
                 "Infant": "",
                 "Toddler": "",
             ],
-            "Sizes": priceMaps,
+            "Prices": priceMaps,
+            "Sizes": sizesMap,
             "Release Years": yearMap
         ]
     }

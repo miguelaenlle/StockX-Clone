@@ -60,7 +60,13 @@ struct SearchView: View {
 
         }
         .sheet(isPresented: $searchViewModel.displayOptions) {
-            FilterView(isPresentingView: $searchViewModel.displayOptions)
+            FilterView(isPresentingView: $searchViewModel.displayOptions,
+                       dismissFilterWithData: { (outputSettings) in
+                            searchViewModel.displayOptions = false
+                            // reload
+                            
+                            print(outputSettings)
+                       })
         }
     }
 }
