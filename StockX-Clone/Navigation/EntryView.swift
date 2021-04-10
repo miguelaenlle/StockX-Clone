@@ -12,17 +12,22 @@ struct EntryView: View {
     var body: some View {
         ZStack {
             switch currentSelectedPage {
-                case .home: Text("Home")
-                case .search: Text("Search")
+                case .home:
+                    Homeview()
+                case .search:
+                    SearchView()
                 case .profile: Text("Profile")
             }
             VStack {
                 Spacer()
                 TabBarView(currentSelectedPage: $currentSelectedPage)
+                    .frame(maxWidth: .infinity)
             }
         }
+        .background(EmptyView())
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
+    
 }
 
 //struct EntryView_Previews: PreviewProvider {
@@ -31,3 +36,4 @@ struct EntryView: View {
 //
 //    }
 //}
+

@@ -3,11 +3,36 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		46E091D4BCDA3D42993A617B /* Pods_StockX_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D69CACBB59638D1B9C1549E /* Pods_StockX_Clone.framework */; };
+		AF20E7C026213C510060793A /* Homeview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF20E7BF26213C510060793A /* Homeview.swift */; };
+		AF20E7C326213CBE0060793A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF20E7C226213CBE0060793A /* HomeViewModel.swift */; };
+		AF20E80126213E770060793A /* TickerScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF20E80026213E770060793A /* TickerScrollView.swift */; };
+		AF2E79062621C28A00CD387C /* TickerSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2E79052621C28A00CD387C /* TickerSymbol.swift */; };
+		AF2E79082621CD8C00CD387C /* Loew-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF20E8292621408B0060793A /* Loew-Italic.otf */; };
+		AF2E79092621CD8C00CD387C /* Loew-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF20E8352621408C0060793A /* Loew-BlackItalic.otf */; };
+		AF2E790A2621CD8C00CD387C /* Loew-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF20E82B2621408B0060793A /* Loew-HeavyItalic.otf */; };
+		AF2E790B2621CD8C00CD387C /* Loew-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF20E8372621408C0060793A /* Loew-MediumItalic.otf */; };
+		AF2E790C2621CD8C00CD387C /* Loew-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF20E8332621408B0060793A /* Loew-Regular.otf */; };
+		AF2E790D2621CD8C00CD387C /* Loew-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF20E8382621408C0060793A /* Loew-ExtraBoldItalic.otf */; };
+		AF2E790E2621CD8C00CD387C /* Loew-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF20E82F2621408B0060793A /* Loew-Thin.otf */; };
+		AF2E790F2621CD8C00CD387C /* Loew-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF20E8362621408C0060793A /* Loew-Heavy.otf */; };
+		AF2E79102621CD8C00CD387C /* Loew-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF20E82E2621408B0060793A /* Loew-Medium.otf */; };
+		AF2E79112621CD8C00CD387C /* Loew-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF20E8322621408B0060793A /* Loew-BoldItalic.otf */; };
+		AF2E79122621CD8C00CD387C /* Loew-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF20E82C2621408B0060793A /* Loew-Bold.otf */; };
+		AF2E79132621CD8C00CD387C /* Loew-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF20E8302621408B0060793A /* Loew-Light.otf */; };
+		AF2E79142621CD8C00CD387C /* Loew-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF20E82A2621408B0060793A /* Loew-Black.otf */; };
+		AF2E79152621CD8C00CD387C /* Loew-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF20E8342621408C0060793A /* Loew-ExtraBold.otf */; };
+		AF2E79162621CD8C00CD387C /* Loew-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF20E82D2621408B0060793A /* Loew-LightItalic.otf */; };
+		AF2E79172621CD8C00CD387C /* Loew-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF20E8312621408B0060793A /* Loew-ThinItalic.otf */; };
+		AF2E79192621CD9000CD387C /* BrutaProExtended-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF20E83B2621409A0060793A /* BrutaProExtended-SemiBold.ttf */; };
+		AF2E791C2621D0D500CD387C /* CategoryImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2E791B2621D0D500CD387C /* CategoryImageView.swift */; };
+		AF2E79202621D44800CD387C /* ItemListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2E791F2621D44800CD387C /* ItemListingView.swift */; };
+		AF2E7923262209D100CD387C /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2E7922262209D100CD387C /* SearchView.swift */; };
+		AF2E792626220A9A00CD387C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2E792526220A9A00CD387C /* SearchViewModel.swift */; };
 		AF4B9CFA26213435001095C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4B9CF926213435001095C9 /* AppDelegate.swift */; };
 		AF4B9CFC26213435001095C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4B9CFB26213435001095C9 /* SceneDelegate.swift */; };
 		AF4B9D0026213437001095C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF4B9CFF26213437001095C9 /* Assets.xcassets */; };
@@ -22,6 +47,31 @@
 		248AFE285F8B7C03DB1EE66C /* Pods-StockX-Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockX-Clone.release.xcconfig"; path = "Target Support Files/Pods-StockX-Clone/Pods-StockX-Clone.release.xcconfig"; sourceTree = "<group>"; };
 		44B2E386316A8149A252196A /* Pods-StockX-Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockX-Clone.debug.xcconfig"; path = "Target Support Files/Pods-StockX-Clone/Pods-StockX-Clone.debug.xcconfig"; sourceTree = "<group>"; };
 		5D69CACBB59638D1B9C1549E /* Pods_StockX_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockX_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF20E7BF26213C510060793A /* Homeview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homeview.swift; sourceTree = "<group>"; };
+		AF20E7C226213CBE0060793A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		AF20E80026213E770060793A /* TickerScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerScrollView.swift; sourceTree = "<group>"; };
+		AF20E8292621408B0060793A /* Loew-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Loew-Italic.otf"; sourceTree = "<group>"; };
+		AF20E82A2621408B0060793A /* Loew-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Loew-Black.otf"; sourceTree = "<group>"; };
+		AF20E82B2621408B0060793A /* Loew-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Loew-HeavyItalic.otf"; sourceTree = "<group>"; };
+		AF20E82C2621408B0060793A /* Loew-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Loew-Bold.otf"; sourceTree = "<group>"; };
+		AF20E82D2621408B0060793A /* Loew-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Loew-LightItalic.otf"; sourceTree = "<group>"; };
+		AF20E82E2621408B0060793A /* Loew-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Loew-Medium.otf"; sourceTree = "<group>"; };
+		AF20E82F2621408B0060793A /* Loew-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Loew-Thin.otf"; sourceTree = "<group>"; };
+		AF20E8302621408B0060793A /* Loew-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Loew-Light.otf"; sourceTree = "<group>"; };
+		AF20E8312621408B0060793A /* Loew-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Loew-ThinItalic.otf"; sourceTree = "<group>"; };
+		AF20E8322621408B0060793A /* Loew-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Loew-BoldItalic.otf"; sourceTree = "<group>"; };
+		AF20E8332621408B0060793A /* Loew-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Loew-Regular.otf"; sourceTree = "<group>"; };
+		AF20E8342621408C0060793A /* Loew-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Loew-ExtraBold.otf"; sourceTree = "<group>"; };
+		AF20E8352621408C0060793A /* Loew-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Loew-BlackItalic.otf"; sourceTree = "<group>"; };
+		AF20E8362621408C0060793A /* Loew-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Loew-Heavy.otf"; sourceTree = "<group>"; };
+		AF20E8372621408C0060793A /* Loew-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Loew-MediumItalic.otf"; sourceTree = "<group>"; };
+		AF20E8382621408C0060793A /* Loew-ExtraBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Loew-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
+		AF20E83B2621409A0060793A /* BrutaProExtended-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BrutaProExtended-SemiBold.ttf"; sourceTree = "<group>"; };
+		AF2E79052621C28A00CD387C /* TickerSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerSymbol.swift; sourceTree = "<group>"; };
+		AF2E791B2621D0D500CD387C /* CategoryImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryImageView.swift; sourceTree = "<group>"; };
+		AF2E791F2621D44800CD387C /* ItemListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListingView.swift; sourceTree = "<group>"; };
+		AF2E7922262209D100CD387C /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		AF2E792526220A9A00CD387C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		AF4B9CF626213435001095C9 /* StockX-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StockX-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF4B9CF926213435001095C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF4B9CFB26213435001095C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +96,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF20E7FF26213E560060793A /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF20E80026213E770060793A /* TickerScrollView.swift */,
+				AF2E79052621C28A00CD387C /* TickerSymbol.swift */,
+				AF2E791B2621D0D500CD387C /* CategoryImageView.swift */,
+				AF2E791F2621D44800CD387C /* ItemListingView.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		AF20E80326213F8A0060793A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AF20E83A262140980060793A /* Bruta */,
+				AF20E828262140860060793A /* Loew */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		AF20E828262140860060793A /* Loew */ = {
+			isa = PBXGroup;
+			children = (
+				AF20E82A2621408B0060793A /* Loew-Black.otf */,
+				AF20E8352621408C0060793A /* Loew-BlackItalic.otf */,
+				AF20E82C2621408B0060793A /* Loew-Bold.otf */,
+				AF20E8322621408B0060793A /* Loew-BoldItalic.otf */,
+				AF20E8342621408C0060793A /* Loew-ExtraBold.otf */,
+				AF20E8382621408C0060793A /* Loew-ExtraBoldItalic.otf */,
+				AF20E8362621408C0060793A /* Loew-Heavy.otf */,
+				AF20E82B2621408B0060793A /* Loew-HeavyItalic.otf */,
+				AF20E8292621408B0060793A /* Loew-Italic.otf */,
+				AF20E8302621408B0060793A /* Loew-Light.otf */,
+				AF20E82D2621408B0060793A /* Loew-LightItalic.otf */,
+				AF20E82E2621408B0060793A /* Loew-Medium.otf */,
+				AF20E8372621408C0060793A /* Loew-MediumItalic.otf */,
+				AF20E8332621408B0060793A /* Loew-Regular.otf */,
+				AF20E82F2621408B0060793A /* Loew-Thin.otf */,
+				AF20E8312621408B0060793A /* Loew-ThinItalic.otf */,
+			);
+			path = Loew;
+			sourceTree = "<group>";
+		};
+		AF20E83A262140980060793A /* Bruta */ = {
+			isa = PBXGroup;
+			children = (
+				AF20E83B2621409A0060793A /* BrutaProExtended-SemiBold.ttf */,
+			);
+			path = Bruta;
+			sourceTree = "<group>";
+		};
 		AF4B9CED26213435001095C9 = {
 			isa = PBXGroup;
 			children = (
@@ -67,19 +168,17 @@
 		AF4B9CF826213435001095C9 /* StockX-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				AF20E7FF26213E560060793A /* Custom Views */,
 				AF4B9D1526213574001095C9 /* Navigation */,
 				AF4B9D12262134E3001095C9 /* Mainapp */,
 				AF4B9D11262134D7001095C9 /* Profileview */,
 				AF4B9D10262134CA001095C9 /* Searchview */,
 				AF4B9D0F262134C5001095C9 /* Detailview */,
 				AF4B9D0E26213475001095C9 /* Homepage */,
-				AF4B9CF926213435001095C9 /* AppDelegate.swift */,
-				AF4B9CFB26213435001095C9 /* SceneDelegate.swift */,
 				AF4B9CFF26213437001095C9 /* Assets.xcassets */,
 				AF4B9D0426213437001095C9 /* LaunchScreen.storyboard */,
 				AF4B9D0726213437001095C9 /* Info.plist */,
 				AF4B9D0126213437001095C9 /* Preview Content */,
-				AF4B9D1E26213777001095C9 /* Constants.swift */,
 			);
 			path = "StockX-Clone";
 			sourceTree = "<group>";
@@ -95,6 +194,8 @@
 		AF4B9D0E26213475001095C9 /* Homepage */ = {
 			isa = PBXGroup;
 			children = (
+				AF20E7BF26213C510060793A /* Homeview.swift */,
+				AF20E7C226213CBE0060793A /* HomeViewModel.swift */,
 			);
 			path = Homepage;
 			sourceTree = "<group>";
@@ -109,6 +210,8 @@
 		AF4B9D10262134CA001095C9 /* Searchview */ = {
 			isa = PBXGroup;
 			children = (
+				AF2E7922262209D100CD387C /* SearchView.swift */,
+				AF2E792526220A9A00CD387C /* SearchViewModel.swift */,
 			);
 			path = Searchview;
 			sourceTree = "<group>";
@@ -123,6 +226,10 @@
 		AF4B9D12262134E3001095C9 /* Mainapp */ = {
 			isa = PBXGroup;
 			children = (
+				AF20E80326213F8A0060793A /* Fonts */,
+				AF4B9CF926213435001095C9 /* AppDelegate.swift */,
+				AF4B9D1E26213777001095C9 /* Constants.swift */,
+				AF4B9CFB26213435001095C9 /* SceneDelegate.swift */,
 			);
 			path = Mainapp;
 			sourceTree = "<group>";
@@ -150,7 +257,6 @@
 				44B2E386316A8149A252196A /* Pods-StockX-Clone.debug.xcconfig */,
 				248AFE285F8B7C03DB1EE66C /* Pods-StockX-Clone.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -213,9 +319,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF2E79082621CD8C00CD387C /* Loew-Italic.otf in Resources */,
+				AF2E79192621CD9000CD387C /* BrutaProExtended-SemiBold.ttf in Resources */,
+				AF2E79132621CD8C00CD387C /* Loew-Light.otf in Resources */,
+				AF2E79092621CD8C00CD387C /* Loew-BlackItalic.otf in Resources */,
+				AF2E790B2621CD8C00CD387C /* Loew-MediumItalic.otf in Resources */,
+				AF2E790A2621CD8C00CD387C /* Loew-HeavyItalic.otf in Resources */,
+				AF2E79162621CD8C00CD387C /* Loew-LightItalic.otf in Resources */,
 				AF4B9D0626213437001095C9 /* LaunchScreen.storyboard in Resources */,
+				AF2E79142621CD8C00CD387C /* Loew-Black.otf in Resources */,
+				AF2E790D2621CD8C00CD387C /* Loew-ExtraBoldItalic.otf in Resources */,
+				AF2E790C2621CD8C00CD387C /* Loew-Regular.otf in Resources */,
+				AF2E79112621CD8C00CD387C /* Loew-BoldItalic.otf in Resources */,
 				AF4B9D0326213437001095C9 /* Preview Assets.xcassets in Resources */,
 				AF4B9D0026213437001095C9 /* Assets.xcassets in Resources */,
+				AF2E790F2621CD8C00CD387C /* Loew-Heavy.otf in Resources */,
+				AF2E79172621CD8C00CD387C /* Loew-ThinItalic.otf in Resources */,
+				AF2E79152621CD8C00CD387C /* Loew-ExtraBold.otf in Resources */,
+				AF2E790E2621CD8C00CD387C /* Loew-Thin.otf in Resources */,
+				AF2E79102621CD8C00CD387C /* Loew-Medium.otf in Resources */,
+				AF2E79122621CD8C00CD387C /* Loew-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,10 +392,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF4B9D1F26213777001095C9 /* Constants.swift in Sources */,
+				AF2E79062621C28A00CD387C /* TickerSymbol.swift in Sources */,
 				AF4B9CFA26213435001095C9 /* AppDelegate.swift in Sources */,
+				AF20E7C326213CBE0060793A /* HomeViewModel.swift in Sources */,
+				AF2E7923262209D100CD387C /* SearchView.swift in Sources */,
+				AF2E792626220A9A00CD387C /* SearchViewModel.swift in Sources */,
 				AF4B9CFC26213435001095C9 /* SceneDelegate.swift in Sources */,
 				AF4B9D1B2621358D001095C9 /* TabBarView.swift in Sources */,
+				AF2E791C2621D0D500CD387C /* CategoryImageView.swift in Sources */,
+				AF20E80126213E770060793A /* TickerScrollView.swift in Sources */,
 				AF4B9D1726213587001095C9 /* EntryView.swift in Sources */,
+				AF20E7C026213C510060793A /* Homeview.swift in Sources */,
+				AF2E79202621D44800CD387C /* ItemListingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

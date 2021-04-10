@@ -24,22 +24,23 @@ struct TabBarViewIcon: View {
                 .foregroundColor(currentSelectedPage == pageName ? iconSelectedColor : iconUnselectedColor)
                 .frame(width: iconSize, height: iconSize)
         })
-        
-            
-
     }
 }
 
 struct TabBarView: View {
 
     let iconSize: CGFloat = 20
-    let tolerance: CGFloat = 5
+    let tolerance: CGFloat = 30
     @Binding var currentSelectedPage: currentPage
     var body: some View {
-        VStack {
-            Rectangle()
-                .foregroundColor(iconUnselectedColor)
-                .frame(height: 1)
+        ZStack {
+            Color.white
+            VStack {
+                Rectangle()
+                    .foregroundColor(iconUnselectedColor)
+                    .frame(height: 1)
+                Spacer()
+            }
             HStack {
                 
                 TabBarViewIcon(currentSelectedPage: $currentSelectedPage, image: Image("trendingIcon"), iconSize: iconSize, pageName: .home)
@@ -49,13 +50,18 @@ struct TabBarView: View {
                 TabBarViewIcon(currentSelectedPage: $currentSelectedPage, image: Image(systemName: "person"), iconSize: iconSize, pageName: .profile)
                 
             }
-            
-            .frame(maxWidth: .infinity)
-            .frame(height: iconSize+(tolerance*2))
             .padding(.horizontal, 50)
+            .padding(.top, -10)
+            
+//            }
+//            .frame(maxWidth: .infinity)
+//            .frame(height: iconSize+(tolerance*2))
         }
         .frame(maxWidth: .infinity)
         .frame(height: iconSize+(tolerance*2))
+        .padding(.bottom, -35)
+        
+        
     }
 }
 //
